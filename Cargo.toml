@@ -1,0 +1,6 @@
+[package]
+name = "ternary-hardware"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Hardware abstraction for ternary operations: ALU, memory (trytes), registers, ternary-to-binary conversion, and balanced ternary arithmetic circuits"
