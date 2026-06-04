@@ -109,6 +109,14 @@ The tryte uses 6 trits, giving a range of ±364 — close to what a 9-bit unsign
 | `ternary-network` | Ternary-weighted graph algorithms |
 | `ternary-attention` | Ternary-valued attention mechanisms |
 
+## Known Limitations
+
+- **Silent overflow on addition.** `TernaryALU::add` discards carry out of the 6th trit. Values exceeding ±364 wrap silently.
+- **Multiply converts to `i32`.** `multiply` performs the product in integer space and converts back — it is not a true ternary multiplication circuit.
+- **No division operation.** The ALU supports add, subtract, multiply, negate, and shifts, but cannot divide.
+- **Ternary-to-binary encoding wastes a code point.** The 2-bit encoding (Neg=00, Zero=01, Pos=10) leaves `11` unused and doesn't align with any standard ternary encoding scheme.
+- **No bounds-checked mutable read.** `TernaryMemory` provides `read(&self, addr)` with bounds checking but no equivalent `read_mut` that returns a mutable reference safely.
+
 ## License
 
 MIT
