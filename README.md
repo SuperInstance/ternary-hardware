@@ -117,6 +117,14 @@ The tryte uses 6 trits, giving a range of ±364 — close to what a 9-bit unsign
 - **Ternary-to-binary encoding wastes a code point.** The 2-bit encoding (Neg=00, Zero=01, Pos=10) leaves `11` unused and doesn't align with any standard ternary encoding scheme.
 - **No bounds-checked mutable read.** `TernaryMemory` provides `read(&self, addr)` with bounds checking but no equivalent `read_mut` that returns a mutable reference safely.
 
+## See Also
+
+- **ternary-circuit** — Circuit and logic design with ternary values
+- **ternary-esp32-firmware** — ESP32 firmware for ternary hardware
+- **ternary-ring** — Ring arithmetic for ternary algebra
+- **ternary-compiler-v2** — Next-gen compiler for ternary instructions
+- **ternary-quantum** — Quantum computing with qutrits
+
 ## License
 
 MIT
